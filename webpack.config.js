@@ -2,6 +2,7 @@ const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+var ImageminPlugin = require('imagemin-webpack-plugin').default
 
 module.exports = {
     entry: ['./src/app.js', './src/app.scss'],
@@ -26,6 +27,14 @@ module.exports = {
                     from: './src/public'
                 }
             ]
+        }),
+        new ImageminPlugin({
+            
+            test: /\.(jpe?g|png|gif|svg)$/i ,
+            pngquant: {
+                quality: '50-60'
+              }
+        
         }),
         new HtmlWebpackPlugin({
             filename: 'index.html',
