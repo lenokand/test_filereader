@@ -1,0 +1,62 @@
+.file-load{
+position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    border: 3px dashed rgb(250, 155, 78);
+    min-height: 400px;
+    font-style: normal;
+    border-radius: 15px;
+    background-color: rgb(240, 234, 234);
+}
+.fila_data{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+
+}
+.label_sign{
+    padding: 30px;
+}
+
+#input{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -20;
+
+}
+.form-title{
+    margin: auto    ;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+form{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    input{
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+    textarea{
+        margin-bottom: 10px;
+        padding: 10px;
+        resize: none;
+    }
+    button{
+        align-self: flex-start;
+        outline: none;
+        border: 1px solid rgb(250, 155, 78);
+        color: rgb(250, 155, 78);
+    }
+}
